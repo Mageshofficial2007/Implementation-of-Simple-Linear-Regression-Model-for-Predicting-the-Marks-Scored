@@ -17,11 +17,11 @@ To write a program to predict the marks scored by a student using the simple lin
 
 ## Program:
 ```
-/*
 Program to implement the simple linear regression model for predicting the marks scored.
 Developed by: MAGESH BOOPATHI.M
 RegisterNumber:24900855  
-*/
+```
+```python
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -51,17 +51,28 @@ plt.title("Hours vs Scores(Training set)")
 plt.xlabel("Hours")
 plt.ylabel("Scores")
 plt.show()
+#Graph plot for test data
+plt.scatter(x_test,y_test,color='black')
+plt.plot(x_train,regressor.predict(x_train),color='red')
+plt.title("Hours vs Scores(Testing set)")
+plt.xlabel("Hours")
+plt.ylabel("scores")
+plt.show()
 mse=mean_absolute_error(y_test,y_pred)
 print('MSE =',mse)
 mae=mean_absolute_error(y_test,y_pred)
 print('MAE =',mae)
 rmse=np.sqrt(mse)
 print("RMSE= ",rmse)
-
-
+```
 ## Output:
+![Screenshot 2024-10-19 170059](https://github.com/user-attachments/assets/ca10783c-f58b-4d66-8eee-4e51a4c42c2e)
+![Screenshot 2024-10-19 170122](https://github.com/user-attachments/assets/b6a1f299-57bc-4dc5-943b-9b3f4592e8db)
+![Screenshot 2024-10-19 170131](https://github.com/user-attachments/assets/9df355b1-757c-43e1-ac5f-6b8a6f9d82c2)
+![Screenshot 2024-10-19 170140](https://github.com/user-attachments/assets/d8c81a90-f0c9-46b7-bb70-f84dcc0845f5)
+![Screenshot 2024-10-19 170148](https://github.com/user-attachments/assets/e7e1d9e0-bf12-42b4-b9e0-b839f4122eca)
+![Screenshot 2024-10-19 170155](https://github.com/user-attachments/assets/963082b7-4520-448b-98ae-e1a8de040305)
 
-![Screenshot 2024-10-17 210833](https://github.com/user-attachments/assets/290739f6-f47f-429b-a418-8d5e0a22d8fa)
 
 
 ## Result:
